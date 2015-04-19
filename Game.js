@@ -85,6 +85,8 @@ BasicGame.Game.prototype = {
         this.timeLeft = 120;
 
         this.beep = this.sound.add('beep',0.3);
+        this.music = this.sound.add('music',1,true);
+        this.music.play();
         this.add.sprite(0, 0, 'gameBackground');
         this.guy = this.add.sprite(400, 64, 'guy');
         this.ground = this.add.group();

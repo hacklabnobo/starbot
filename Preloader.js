@@ -33,6 +33,7 @@ BasicGame.Preloader.prototype = {
 		this.load.spritesheet('fireball', 'images/fireball.png', 10, 14);
 
     this.load.audio('beep', 'sounds/beep.wav');
+    this.load.audio('music', 'sounds/music.mp3');
 		//	+ lots of other required assets here
 	},
 
