@@ -25,6 +25,8 @@ BasicGame.MainMenu.prototype = {
       message = "You got " + this.score + " meteorites!";
       fontSize = 50;
     } else {
+      this.music = this.sound.add('music',1.5,true);
+      this.music.play();
       message = "☆ Starbot ☆";
       fontSize = 80;
     }
