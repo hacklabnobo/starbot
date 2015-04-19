@@ -65,6 +65,7 @@ BasicGame.Game.prototype = {
     },
 
     catchFireball: function(guy, fireball) {
+      this.beep.play();
       this.removeFireball(fireball);
       this.score = this.score + 1;
       this.updateScoreDisplay();
@@ -83,6 +84,7 @@ BasicGame.Game.prototype = {
         this.score = 0;
         this.timeLeft = 120;
 
+        this.beep = this.sound.add('beep',0.3);
         this.add.sprite(0, 0, 'gameBackground');
         this.guy = this.add.sprite(400, 64, 'guy');
         this.ground = this.add.group();

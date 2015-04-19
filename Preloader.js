@@ -9,9 +9,7 @@ BasicGame.Preloader = function (game) {
 };
 
 BasicGame.Preloader.prototype = {
-
 	preload: function () {
-
 		//	These are the assets we loaded in Boot.js
 		//	A nice sparkly background and a loading progress bar
 		this.background = this.add.sprite(0, 0, 'preloaderBackground');
@@ -27,13 +25,15 @@ BasicGame.Preloader.prototype = {
 		this.load.image('titlepage', 'images/preloader_background.jpg');
 		this.load.image('gameBackground', 'images/preloader_background.jpg');
 		this.load.image('playButton', 'images/play_button.png');
-		this.load.spritesheet('guy', 'images/guy.png', 32, 32);
-		this.load.spritesheet('fireball', 'images/fireball.png', 10, 14);
     this.load.image('groundMid', 'images/ground_mid.png');
     this.load.image('groundLeft', 'images/ground_leftend.png');
     this.load.image('groundRight', 'images/ground_rightend.png');
-		//	+ lots of other required assets here
 
+		this.load.spritesheet('guy', 'images/guy.png', 32, 32);
+		this.load.spritesheet('fireball', 'images/fireball.png', 10, 14);
+
+    this.load.audio('beep', 'sounds/beep.wav');
+		//	+ lots of other required assets here
 	},
 
 	create: function () {
